@@ -23,7 +23,7 @@ class StudentController extends Controller
         $student=new Students();
         $student->name = $request->name;
         $student->student_id = $request->student_id;
-        $student->created_at = $request->created_at;
+        $student->published_at = $request->published_at;
     //saves the input in database
         $student->save();
         //a response when student are added in database
@@ -38,7 +38,7 @@ class StudentController extends Controller
 
         $student->name = $request->name;
         $student->student_id = $request->student_id;
-        $student->created_at = $request->created_at;
+        $student->published_at = $request->published_at;
         //updates the data
 
         $student->update();

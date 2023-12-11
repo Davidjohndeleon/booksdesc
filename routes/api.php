@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-//make routes
+//make routes for books in storing, deleting and updating data
 Route::get('/books',[BooksController::class,'index']);
 Route::get('/book/{id}',[BooksController::class,'show']);
 Route::post('/book',[BooksController::class,'store']);
@@ -29,7 +29,7 @@ Route::delete('/book/{id}',[BooksController::class,'destroy']);
 Route::put('/book/{id}',[BooksController::class,'update']);
 
 
-//routes for getting and saving student data
+//routes for getting, updating and saving student data
 Route::get('/students',[StudentController::class,'index']);
 Route::get('/student/{id}',[StudentController::class,'show']);
 Route::post('/student',[StudentController::class,'store']);
